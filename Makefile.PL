@@ -17,6 +17,7 @@ WriteMakefile(
 	'CONFIGURE_REQUIRES' => {
 		'ExtUtils::MakeMaker' => 0,
 	},
+	'LICENSE' => 'bsd',
 	'NAME' => 'Cnf::Dot',
 	'PREREQ_PM' => {
 		'Class::Utils' => 0.01,
