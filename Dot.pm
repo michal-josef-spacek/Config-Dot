@@ -215,15 +215,15 @@ Reset content in class (config parameter).
 
 =head1 DEPENDENCIES
 
-L<Class::Utils(3pm)>,
-L<Cnf::Utils(3pm)>,
-L<Englisg(3pm)>,
-L<Error::Pure(3pm)>.
+L<Class::Utils>,
+L<Cnf::Utils>,
+L<Englisg>,
+L<Error::Pure>.
 
 =head1 SEE ALSO
 
-L<Cnf(3pm)>,
-L<Cnf::More(3pm)>,
+L<Cnf>,
+L<Cnf::More>,
 
 =head1 AUTHOR
 
