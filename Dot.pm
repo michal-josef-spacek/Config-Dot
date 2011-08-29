@@ -1,4 +1,4 @@
-package Cnf::Dot;
+package Config::Dot;
 
 # Pragmas.
 use strict;
@@ -8,7 +8,7 @@ use warnings;
 use Class::Utils qw(set_params);
 # XXX Zrusit zavislost na Cnf balik. Takze bud vytvorit Cnf::Utils balik nebo
 # zrusit.
-use Cnf::Utils qw(hash);
+use Config::Utils qw(hash);
 use English qw(-no_match_vars);
 use Error::Pure qw(err);
 use Readonly;
@@ -117,11 +117,11 @@ __END__
 
 =head1 NAME
 
-Cnf::Dot - Module for simple configure file parsing.
+Config::Dot - Module for simple configure file parsing.
 
 =head1 SYNOPSIS
 
- my $cnf = Cnf->new(%params);
+ my $cnf = Config->new(%params);
  my $struct_hr = $cnf->parse($string);
  $cnf->reset;
 
@@ -181,7 +181,7 @@ Reset content in class (config parameter).
  Mine:
          TODO
 
- From Cnf::Utils::conflict():
+ From Config::Utils::conflict():
          TODO
 
  From Class::Utils::set_params():
@@ -199,10 +199,10 @@ Reset content in class (config parameter).
  use warnings;
 
  # Modules.
- use Cnf;
+ use Config::Dor;
 
  # Object.
- my $struct_hr = Cnf->new->parse_file('file.conf');
+ my $struct_hr = Config::Dot->new->parse_file('file.conf');
 
  # hash structure in $struct_hr:
  # {
@@ -216,7 +216,7 @@ Reset content in class (config parameter).
 =head1 DEPENDENCIES
 
 L<Class::Utils>,
-L<Cnf::Utils>,
+L<Config::Utils>,
 L<Englisg>,
 L<Error::Pure>.
 

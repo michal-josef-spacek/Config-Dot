@@ -17,20 +17,20 @@ license: bsd
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-name: Cnf-Dot
+name: Config-Dot
 no_index:
   directory:
     - inc
     - t
 requires:
   Class::Utils: 0.02
-  Cnf::Utils: 0
+  Config::Utils: 0.01
   Error::Pure: 0.05
   Readonly: 0
 resources:
   license: http://opensource.org/licenses/bsd-license.php
   repository:
     type: git
-    url: git://github.com/tupinek/Cnf-Dot
-    web: https://github.com/tupinek/Cnf-Dot
+    url: git://github.com/tupinek/Config-Dot
+    web: https://github.com/tupinek/Config-Dot
 version: 0.01

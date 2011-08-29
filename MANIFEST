@@ -11,7 +11,7 @@ inc/Module/Install/WriteAll.pm
 Makefile.PL
 MANIFEST			This list of files
 META.yml
-t/Cnf-Dot/00-use.t
-t/Cnf-Dot/01-version.t
-t/Cnf-Dot/02-pod_coverage.t
-t/Cnf-Dot/03-pod.t
+t/Config-Dot/00-use.t
+t/Config-Dot/01-version.t
+t/Config-Dot/02-pod_coverage.t
+t/Config-Dot/03-pod.t

@@ -8,8 +8,8 @@ use Test::More 'tests' => 2;
 BEGIN {
 
 	# Test.
-	use_ok('Cnf::Dot');
+	use_ok('Config::Dot');
 }
 
 # Test.
-require_ok('Cnf::Dot');
+require_ok('Config::Dot');
