@@ -1,0 +1,9 @@
+TODO
+====
+1. serialize() metoda.
+2. Odstranit zavislost na Cnf::Utils.
+3. Prejmenovat na Config::Dot.
+4.
+
+Applied
+=======
