@@ -1,9 +1,13 @@
 TODO
 ====
 1. serialize() metoda.
-2. Odstranit zavislost na Cnf::Utils.
-3. Prejmenovat na Config::Dot.
 4.
 
 Applied
 =======
+3. Prejmenovat na Config::Dot.
+OK [20110829] skim
+
+2. Odstranit zavislost na Cnf::Utils.
+Zavislost na Config::Utils.
+OK [20110829] skim

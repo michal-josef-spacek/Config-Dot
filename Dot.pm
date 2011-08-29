@@ -6,8 +6,6 @@ use warnings;
 
 # Modules.
 use Class::Utils qw(set_params);
-# XXX Zrusit zavislost na Cnf balik. Takze bud vytvorit Cnf::Utils balik nebo
-# zrusit.
 use Config::Utils qw(hash);
 use English qw(-no_match_vars);
 use Error::Pure qw(err);
