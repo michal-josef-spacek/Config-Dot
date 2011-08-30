@@ -28,9 +28,6 @@ sub new {
 	# Set conflicts detection as error.
 	$self->{'set_conflicts'} = 1;
 
-	# File suffix.
-	$self->{'suffix'} = $EMPTY_STR;
-
 	# Process params.
 	set_params($self, @params);
 
@@ -186,11 +183,6 @@ Config::Dot - Module for simple configure file parsing.
 
  TODO
  Default value is 1.
-
-=item * B<suffix>
-
- TODO
- Default suffix is ''.
 
 =back
 
