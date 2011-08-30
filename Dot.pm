@@ -72,6 +72,12 @@ sub reset {
 	return;
 }
 
+# Serialize.
+sub serialize {
+	my $self = shift;
+	return join "\n", $self->_serialize('=', $self->{'config'});
+}
+
 # Parse string.
 sub _parse {
 	my ($self, $string) = @_;
@@ -103,6 +109,26 @@ sub _parse {
 
 	# Ok.
 	return 1;
+}
+
+# Serialize.
+sub _serialize {
+	my ($self, $sep, $config_hr) = @_;
+	my @ret;
+	foreach my $key (sort keys %{$config_hr}) {
+		if (ref $config_hr->{$key} eq 'HASH') {
+			my @subkey = $self->_serialize('.',
+				$config_hr->{$key});
+			foreach my $subkey (@subkey) {
+				push @ret, $key.$sep.$subkey;
+			}
+		} elsif (ref $config_hr->{$key} eq '') {
+			push @ret, $key.$sep.$config_hr->{$key};
+		} else {
+			err 'Bad structure for serialize.';
+		}
+	}
+	return @ret;
 }
 
 1;
@@ -158,6 +184,10 @@ Parse string $tmp or reference to array $tmp and returns hash structure.
 
 Reset content in class (config parameter).
 
+=item B<serialize()>
+
+Serialize 'config' hash to output.
+
 =back
 
 =head1 PARAMETER_FILE
@@ -185,7 +215,7 @@ Reset content in class (config parameter).
  From Class::Utils::set_params():
          Unknown parameter '%s'.
 
-=head1 EXAMPLE
+=head1 EXAMPLE1
 
  # cat file 'file.conf':
  # par1=val1
@@ -197,7 +227,7 @@ Reset content in class (config parameter).
  use warnings;
 
  # Modules.
- use Config::Dor;
+ use Config::Dot;
 
  # Object.
  my $struct_hr = Config::Dot->new->parse_file('file.conf');
@@ -211,11 +241,33 @@ Reset content in class (config parameter).
  #   }
  # }
 
+=head1 EXAMPLE2
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use Config::Dot;
+
+ # Object with data.
+ my $c = Config::Dot->new(
+         'config' => {
+                 'key1' => {
+                         'subkey1' => 'value1',
+                 },
+                 'key2' => 'value2',
+         },
+ );
+
+ # Serialize.
+ print $c->serialize."\n";
+
 =head1 DEPENDENCIES
 
 L<Class::Utils>,
 L<Config::Utils>,
-L<Englisg>,
+L<English>,
 L<Error::Pure>.
 
 =head1 SEE ALSO
