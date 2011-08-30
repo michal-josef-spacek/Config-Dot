@@ -270,12 +270,13 @@ Serialize 'config' hash to output.
 L<Class::Utils>,
 L<Config::Utils>,
 L<English>,
-L<Error::Pure>.
+L<Error::Pure>,
+L<Readonly>.
 
 =head1 SEE ALSO
 
 L<Cnf>,
-L<Cnf::More>,
+L<Cnf::More>.
 
 =head1 AUTHOR
 
