@@ -16,3 +16,6 @@ t/Config-Dot/01-version.t
 t/Config-Dot/02-pod_coverage.t
 t/Config-Dot/03-pod.t
 t/Config-Dot/04-new.t
+t/Config-Dot/05-parse.t
+t/Config-Dot/06-reset.t
+t/Config-Dot/07-serialize.t
