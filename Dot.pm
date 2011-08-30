@@ -85,7 +85,7 @@ sub _parse {
 	}
 
 	# Split.
-	my ($key, $val) = split m/$self->{'sep'}/sm, $string, 2;
+	my ($key, $val) = split m/=/sm, $string, 2;
 
 	# Not a key.
 	if (length $key < 1) {
