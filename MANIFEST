@@ -15,3 +15,4 @@ t/Config-Dot/00-use.t
 t/Config-Dot/01-version.t
 t/Config-Dot/02-pod_coverage.t
 t/Config-Dot/03-pod.t
+t/Config-Dot/04-new.t
