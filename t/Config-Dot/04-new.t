@@ -28,5 +28,5 @@ is($EVAL_ERROR, "Unknown parameter 'something'.\n",
 eval {
 	Config::Dot->new('config' => '');
 };
-is($EVAL_ERROR, "Config parameter must be a reference to hash.\n",
+is($EVAL_ERROR, "Bad 'config' parameter.\n",
 	'Bad \'config\' parameter.');

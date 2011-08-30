@@ -1,6 +1,5 @@
 TODO
 ====
-4. Jak resit kontrolu na 'config' parametr? Melo by se to resit rekurzivne.
 5. cover testy.
 6.
 
@@ -14,4 +13,7 @@ Zavislost na Config::Utils.
 OK [20110829] skim
 
 1. serialize() metoda.
+OK [20110830] skim
+
+4. Jak resit kontrolu na 'config' parametr? Melo by se to resit rekurzivne.
 OK [20110830] skim

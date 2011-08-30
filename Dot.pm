@@ -35,8 +35,8 @@ sub new {
 	set_params($self, @params);
 
 	# Check config hash.
-	if (ref $self->{'config'} ne 'HASH') {
-		err 'Config parameter must be a reference to hash.';
+	if (! $self->_check($self->{'config'})) {
+		err 'Bad \'config\' parameter.';
 	}
 
 	# Count of lines.
@@ -78,6 +78,23 @@ sub reset {
 sub serialize {
 	my $self = shift;
 	return join "\n", $self->_serialize('.', $self->{'config'});
+}
+
+# Check structure.
+sub _check {
+	my ($self, $config_hr) = @_;
+	if (ref $config_hr eq 'HASH') {
+		foreach my $key (sort keys %{$config_hr}) {
+			if (ref $config_hr->{$key} ne ''
+				&& ! $self->_check($config_hr->{$key})) {
+
+				return 0;
+			}
+		}
+		return 1;
+	} else {
+		return 0;
+	}
 }
 
 # Parse string.
@@ -124,10 +141,8 @@ sub _serialize {
 			foreach my $subkey (@subkey) {
 				push @ret, $key.'.'.$subkey;
 			}
-		} elsif (ref $config_hr->{$key} eq '') {
-			push @ret, $key.'='.$config_hr->{$key};
 		} else {
-			err 'Bad structure for serialize.';
+			push @ret, $key.'='.$config_hr->{$key};
 		}
 	}
 	return @ret;
@@ -164,6 +179,7 @@ Config::Dot - Module for simple configure file parsing.
 =item * B<config>
 
  Reference to hash structure with default config data.
+ This is hash of hashes structure.
  Default value is reference to blank hash.
 
 =item * B<set_conflicts>
@@ -210,10 +226,10 @@ Serialize 'config' hash to output.
 =head1 ERRORS
 
  Mine:
-         TODO
+         Bad 'config' parameter.
 
  From Config::Utils::conflict():
-         TODO
+         Conflict in '%s'.
 
  From Class::Utils::set_params():
          Unknown parameter '%s'.
