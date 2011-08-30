@@ -5,7 +5,7 @@ use warnings;
 # Modules.
 use Config::Dot;
 use English qw(-no_match_vars);
-use Test::More 'tests' => 4;
+use Test::More 'tests' => 5;
 
 # Test.
 my $obj = Config::Dot->new;
@@ -27,6 +27,17 @@ is($EVAL_ERROR, "Unknown parameter 'something'.\n",
 # Test.
 eval {
 	Config::Dot->new('config' => '');
+};
+is($EVAL_ERROR, "Bad 'config' parameter.\n",
+	'Bad \'config\' parameter.');
+
+# Test.
+eval {
+	Config::Dot->new(
+		'config' => {
+			'key' => [],
+		},
+	);
 };
 is($EVAL_ERROR, "Bad 'config' parameter.\n",
 	'Bad \'config\' parameter.');

@@ -1,6 +1,5 @@
 TODO
 ====
-5. cover testy.
 6.
 
 Applied
@@ -16,4 +15,7 @@ OK [20110829] skim
 OK [20110830] skim
 
 4. Jak resit kontrolu na 'config' parametr? Melo by se to resit rekurzivne.
+OK [20110830] skim
+
+5. cover testy.
 OK [20110830] skim
