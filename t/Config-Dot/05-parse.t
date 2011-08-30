@@ -5,7 +5,7 @@ use warnings;
 # Modules.
 use Config::Dot;
 use English qw(-no_match_vars);
-use Test::More 'tests' => 3;
+use Test::More 'tests' => 5;
 
 # Test.
 my $c = Config::Dot->new;
@@ -40,4 +40,30 @@ $c->reset;
 eval {
 	$c->parse(';=');
 };
-is($EVAL_ERROR, "Bad key ';' in string ';=' at line '1'.\n");
+is($EVAL_ERROR, "Bad key ';' in string ';=' at line '1'.\n",
+	'Bad key.');
+
+# Test.
+$c->reset;
+my $conflict = <<'END';
+key=value
+key=value
+END
+eval {
+	$c->parse($conflict);
+};
+is($EVAL_ERROR, "Conflict in 'key'.\n",
+	'Conflict in key \'key\', \'set_conflict\' = 1.');
+
+# Test.
+$c = Config::Dot->new(
+	'set_conflicts' => 0,
+);
+is_deeply(
+	$c->parse($conflict),
+	{
+		'key' => 'value',
+	},
+	'Conflict in key \'key\', \'set_conflict\' = 0.',
+);
+
