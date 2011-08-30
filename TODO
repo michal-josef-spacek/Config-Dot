@@ -1,6 +1,5 @@
 TODO
 ====
-1. serialize() metoda.
 4.
 
 Applied
@@ -11,3 +10,6 @@ OK [20110829] skim
 2. Odstranit zavislost na Cnf::Utils.
 Zavislost na Config::Utils.
 OK [20110829] skim
+
+1. serialize() metoda.
+OK [20110830] skim
