@@ -51,12 +51,13 @@ sub new {
 
 # Parse text or array of texts.
 sub parse {
-	my ($self, $tmp) = @_;
+	my ($self, $string_or_array_ref) = @_;
 	my @text;
-	if (ref $tmp eq 'ARRAY') {
-		@text = @{$tmp};
+	if (ref $string_or_array_ref eq 'ARRAY') {
+		@text = @{$string_or_array_ref};
 	} else {
-		@text = split m/$INPUT_RECORD_SEPARATOR/sm, $tmp;
+		@text = split m/$INPUT_RECORD_SEPARATOR/sm,
+			$string_or_array_ref;
 	}
 	foreach my $line (@text) {
 		$self->{'count'}++;
@@ -176,9 +177,10 @@ Config::Dot - Module for simple configure file parsing.
 
 =back
 
-=item B<parse($tmp)>
+=item B<parse($string_or_array_ref)>
 
-Parse string $tmp or reference to array $tmp and returns hash structure.
+Parse string $string_or_array_ref or reference to array 
+$string_or_array_ref and returns hash structure.
 
 =item B<reset()>
 
