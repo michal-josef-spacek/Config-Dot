@@ -181,7 +181,7 @@ Config::Dot - Module for simple configure file parsing.
 
 =item * B<set_conflicts>
 
- TODO
+ Set conflicts detection as error.
  Default value is 1.
 
 =back
