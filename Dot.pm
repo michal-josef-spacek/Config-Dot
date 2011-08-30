@@ -267,6 +267,10 @@ Serialize 'config' hash to output.
  # Serialize.
  print $c->serialize."\n";
 
+ # Output:
+ # key1=subkey1.value1
+ # key2=value2
+
 =head1 DEPENDENCIES
 
 L<Class::Utils>,
