@@ -70,6 +70,7 @@ sub parse {
 sub reset {
 	my $self = shift;
 	$self->{'config'} = {};
+	$self->{'count'} = 0;
 	return;
 }
 
