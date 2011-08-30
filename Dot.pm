@@ -77,7 +77,7 @@ sub reset {
 # Serialize.
 sub serialize {
 	my $self = shift;
-	return join "\n", $self->_serialize('=', $self->{'config'});
+	return join "\n", $self->_serialize('.', $self->{'config'});
 }
 
 # Parse string.
@@ -122,10 +122,10 @@ sub _serialize {
 			my @subkey = $self->_serialize('.',
 				$config_hr->{$key});
 			foreach my $subkey (@subkey) {
-				push @ret, $key.$sep.$subkey;
+				push @ret, $key.'.'.$subkey;
 			}
 		} elsif (ref $config_hr->{$key} eq '') {
-			push @ret, $key.$sep.$config_hr->{$key};
+			push @ret, $key.'='.$config_hr->{$key};
 		} else {
 			err 'Bad structure for serialize.';
 		}
