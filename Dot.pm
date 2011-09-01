@@ -212,7 +212,7 @@ Serialize 'config' hash to output.
 
  # Parameters.
  # Key must be '[-\w\.:,]+'.
- # Default mode with '=' separator ('sep' parameter in constructor.).
+ # Separator is '='.
  key=val
  key2.subkey.subkey=val
 
