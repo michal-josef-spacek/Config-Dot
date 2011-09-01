@@ -159,7 +159,7 @@ Config::Dot - Module for simple configure file parsing.
 
 =head1 SYNOPSIS
 
- my $cnf = Config->new(%params);
+ my $cnf = Config::Dot->new(%params);
  my $struct_hr = $cnf->parse($string);
  $cnf->reset;
 
