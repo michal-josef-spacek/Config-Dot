@@ -14,11 +14,10 @@ requires 'Class::Utils' => 0.02;
 requires 'Config::Utils' => 0.01;
 requires 'Error::Pure' => 0.05;
 requires 'Readonly' => 0;
-resources 'repository' => {
-	'url' => 'git://github.com/tupinek/Config-Dot',
-	'web' => 'https://github.com/tupinek/Config-Dot',
-	'type' => 'git',
-};
+resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
+	'?Name=Config-Dot';
+resources 'homepage' => 'https://github.com/tupinek/Config-Dot';
+resources 'repository' => 'git://github.com/tupinek/Config-Dot';
 test_requires 'English' => 0;
 test_requires 'File::Object' => 0.03;
 test_requires 'Test::More' => 0;
