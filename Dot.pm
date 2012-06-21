@@ -291,8 +291,7 @@ L<Readonly>.
 
 =head1 SEE ALSO
 
-L<Cnf>,
-L<Cnf::More>.
+L<Config::Utils>.
 
 =head1 AUTHOR
 
