@@ -21,6 +21,7 @@ meta-spec:
 name: Config-Dot
 no_index:
   directory:
+    - examples
     - inc
     - t
 requires:
@@ -33,4 +34,4 @@ resources:
   homepage: https://github.com/tupinek/Config-Dot
   license: http://opensource.org/licenses/bsd-license.php
   repository: git://github.com/tupinek/Config-Dot
-version: 0.01
+version: 0.02
