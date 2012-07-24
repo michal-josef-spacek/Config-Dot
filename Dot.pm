@@ -74,7 +74,7 @@ sub reset {
 # Serialize.
 sub serialize {
 	my $self = shift;
-	return join "\n", $self->_serialize('.', $self->{'config'});
+	return join "\n", $self->_serialize($self->{'config'});
 }
 
 # Check structure.
@@ -129,12 +129,11 @@ sub _parse {
 
 # Serialize.
 sub _serialize {
-	my ($self, $sep, $config_hr) = @_;
+	my ($self, $config_hr) = @_;
 	my @ret;
 	foreach my $key (sort keys %{$config_hr}) {
 		if (ref $config_hr->{$key} eq 'HASH') {
-			my @subkey = $self->_serialize('.',
-				$config_hr->{$key});
+			my @subkey = $self->_serialize($config_hr->{$key});
 			foreach my $subkey (@subkey) {
 				push @ret, $key.'.'.$subkey;
 			}
