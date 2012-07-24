@@ -293,6 +293,10 @@ L<Readonly>.
 
 L<Config::Utils>.
 
+=head1 REPOSITORY
+
+L<https://github.com/tupinek/Config-Dot>
+
 =head1 AUTHOR
 
 Michal Špaček L<mailto:skim@cpan.org>
