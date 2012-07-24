@@ -74,7 +74,8 @@ sub reset {
 # Serialize.
 sub serialize {
 	my $self = shift;
-	return join "\n", $self->_serialize($self->{'config'});
+	return join $INPUT_RECORD_SEPARATOR,
+		$self->_serialize($self->{'config'});
 }
 
 # Check structure.

@@ -1,4 +1,5 @@
 0.02
+- Fix serialize with $INPUT_RECORD_SEPARATOR.
 - Remove obsolete code.
 
 0.01 (June 22, 2012)
