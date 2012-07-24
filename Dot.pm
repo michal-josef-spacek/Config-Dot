@@ -221,11 +221,11 @@ Serialize 'config' hash to output.
  Mine:
          Bad 'config' parameter.
 
- From Config::Utils::conflict():
-         Conflict in '%s'.
-
  From Class::Utils::set_params():
          Unknown parameter '%s'.
+
+ From Config::Utils::conflict():
+         Conflict in '%s'.
 
 =head1 EXAMPLE1
 

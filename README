@@ -48,11 +48,11 @@ ERRORS
      Mine:
              Bad 'config' parameter.
 
-     From Config::Utils::conflict():
-             Conflict in '%s'.
-
      From Class::Utils::set_params():
              Unknown parameter '%s'.
+
+     From Config::Utils::conflict():
+             Conflict in '%s'.
 
 EXAMPLE1
      # Pragmas.
