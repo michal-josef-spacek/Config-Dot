@@ -1,4 +1,4 @@
-0.02
+0.02 (July 24, 2012)
 - Change versions of my modules to last version.
 - Fix serialize with $INPUT_RECORD_SEPARATOR.
 - Remove obsolete code.
