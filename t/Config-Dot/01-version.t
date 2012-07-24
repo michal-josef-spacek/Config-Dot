@@ -7,4 +7,4 @@ use Config::Dot;
 use Test::More 'tests' => 1;
 
 # Test.
-is($Config::Dot::VERSION, 0.02, 'Version.');
+is($Config::Dot::VERSION, 0.03, 'Version.');
