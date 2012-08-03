@@ -11,7 +11,7 @@ author 'Michal Špaček <skim@cpan.org>';
 license 'bsd';
 name 'Config-Dot';
 requires 'Class::Utils' => 0.03;
-requires 'Config::Utils' => 0.02;
+requires 'Config::Utils' => 0.03;
 requires 'Error::Pure' => 0.08;
 requires 'Readonly' => 0;
 resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
