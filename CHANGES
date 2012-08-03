@@ -1,5 +1,6 @@
 0.03
 - Add git repository to doc.
+- Add 'callback' parameter.
 
 0.02 (July 24, 2012)
 - Change versions of my modules to last version.
