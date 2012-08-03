@@ -1,6 +1,5 @@
 TODO
 ====
-6. Pridat callback jako v Cnf::More?
 7. Pridat priklad na callback.
 8.
 
@@ -21,3 +20,6 @@ OK [20110830] skim
 
 5. cover testy.
 OK [20110830] skim
+
+6. Pridat callback jako v Cnf::More?
+OK [20120803] skim

@@ -22,6 +22,9 @@ sub new {
 	my ($class, @params) = @_;
 	my $self = bless {}, $class;
 
+	# Callback.
+	$self->{'callback'} = undef;
+
 	# Config hash.
 	$self->{'config'} = {};
 
@@ -34,6 +37,11 @@ sub new {
 	# Check config hash.
 	if (! $self->_check($self->{'config'})) {
 		err 'Bad \'config\' parameter.';
+	}
+
+	# Check callback.
+	if (defined $self->{'callback'} && ref $self->{'callback'} ne 'CODE') {
+		err 'Parameter \'callback\' isn\'t code reference.';
 	}
 
 	# Count of lines.
@@ -174,6 +182,14 @@ Config::Dot - Module for simple configure file parsing.
 
 =over 8
 
+=item * B<callback>
+
+ Callback code for adding parameter.
+ Callback arguments are:
+ $key_ar - Reference to array with keys.
+ $value - Key value.
+ Default is undef.
+
 =item * B<config>
 
  Reference to hash structure with default config data.
@@ -220,6 +236,7 @@ Serialize 'config' hash to output.
 
  Mine:
          Bad 'config' parameter.
+         Parameter 'callback' isn't code reference.
 
  From Class::Utils::set_params():
          Unknown parameter '%s'.

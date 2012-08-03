@@ -5,7 +5,7 @@ use warnings;
 # Modules.
 use Config::Dot;
 use English qw(-no_match_vars);
-use Test::More 'tests' => 5;
+use Test::More 'tests' => 6;
 
 # Test.
 my $c = Config::Dot->new;
@@ -67,3 +67,22 @@ is_deeply(
 	'Conflict in key \'key\', \'set_conflict\' = 0.',
 );
 
+# Test.
+$c = Config::Dot->new(
+	'callback' => sub {
+		my (undef, $val) = @_;
+		if ($val == 1) {
+			return 'XXX',
+		}
+		return $val;
+	}
+);
+$ret = $c->parse(['key1=1', 'key2=2']);
+is_deeply(
+	$ret,
+	{
+		'key1' => 'XXX',
+		'key2' => '2',
+	},
+	'Parsing with callback.',
+);
