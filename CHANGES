@@ -1,4 +1,5 @@
 0.04
+- Add Test::NoWarnings to tests.
 - Update req. modules version.
 
 0.03 (August, 03, 2012)
