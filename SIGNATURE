@@ -1,0 +1,52 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.70.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 97eac3a7a2f4b3500f14b4d878304f92058cd584 Changes
+SHA1 a2f6474b453397883c7d0357cc46f02c799d6942 Dot.pm
+SHA1 02baeec4189fd46a412d70ba16634276e975b4c1 MANIFEST
+SHA1 7029f713185594117cd23165a5bece22177a78ac META.yml
+SHA1 4d8ee856f31b26f514bc8ab50237e0c1e9d3ea33 Makefile.PL
+SHA1 2bb372745f0eae8554a1ccede84810345dcfad7e README
+SHA1 9031eb57018d85b05e7bf7d67165368353da1fcd examples/ex1.pl
+SHA1 496e6aa08b1705d41a0f25fe525816b3fd9ced48 examples/ex2.pl
+SHA1 ed70909a06542bb40c150511493832d260b40e90 examples/ex3.pl
+SHA1 8a924add836b60fb23b25c8506d45945e02f42f4 inc/Module/Install.pm
+SHA1 2d0fad3bf255f8c1e7e1e34eafccc4f595603ddc inc/Module/Install/Base.pm
+SHA1 f0e01fff7d73cd145fbf22331579918d4628ddb0 inc/Module/Install/Can.pm
+SHA1 7328966e4fda0c8451a6d3850704da0b84ac1540 inc/Module/Install/Fetch.pm
+SHA1 b62ca5e2d58fa66766ccf4d64574f9e1a2250b34 inc/Module/Install/Makefile.pm
+SHA1 1aa925be410bb3bfcd84a16985921f66073cc1d2 inc/Module/Install/Metadata.pm
+SHA1 e4196994fa75e98bdfa2be0bdeeffef66de88171 inc/Module/Install/Win32.pm
+SHA1 c3a6d0d5b84feb3280622e9599e86247d58b0d18 inc/Module/Install/WriteAll.pm
+SHA1 a37275ff3c3163304026fae28f97286f10191d3d t/Config-Dot/00-use.t
+SHA1 dc0e2bfee832b5762431b41153b46f04048e890b t/Config-Dot/01-version.t
+SHA1 00c2affe9dbef951c2a498c865dcb2bfad8f101d t/Config-Dot/02-pod_coverage.t
+SHA1 86496fac91653e3e3a1385a66f09e54eeeb62b79 t/Config-Dot/03-pod.t
+SHA1 86d829749a519765926ce047f892046bca6c7266 t/Config-Dot/04-new.t
+SHA1 d0e569ed57ea5e6cb7f8e2a8b219c3b7e68f767a t/Config-Dot/05-parse.t
+SHA1 52c198d0041a4b2477c201a1316caa24422dc2ff t/Config-Dot/06-reset.t
+SHA1 24142d3d066a9c363091e4dd54350813d07f3692 t/Config-Dot/07-serialize.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQEcBAEBAgAGBQJSPWngAAoJEAwa+cf4dLBaWlgIAL2R69dzZo2JUdbErVUuoqVn
+gZhXeoJlLcOUhzKsnfJVkAFFFfXoKTFKHYmVnHx2UB5aFuqkLO46XS+BwoxIAtg6
+zj3f/Ca1y4pXgOUhFU5C9oZNcz2MZ/8Ir24n2CGlD/d5xFxpD2cs6X/mm9zmYQwt
+V4D9vTc+Ql/DRkpqsKtB7lEn7gupc7m5KlF0p2JZD1d6E+YFkPvkMZ7CFTD/V6Xj
+fl85rqIX/AS4g0aSm4mOPmll+g/EMkjSihXD0avXyopKB/+dLnmV6hqTYJv+fLHk
+RaC1SGbhN2RPfY8cAuVML3OxfruVlNxJ99cb9S+Oqxb1Sg/hSzNUzyvk3Rs9xLc=
+=/lgK
+-----END PGP SIGNATURE-----
