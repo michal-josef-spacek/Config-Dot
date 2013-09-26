@@ -176,13 +176,13 @@ Config::Dot - Module for simple configure file parsing.
 
 =over 8
 
-=item B<new(%params)>
+=item C<new(%params)>
 
  Constructor.
 
 =over 8
 
-=item * B<callback>
+=item * C<callback>
 
  Callback code for adding parameter.
  Callback arguments are:
@@ -190,29 +190,29 @@ Config::Dot - Module for simple configure file parsing.
  $value - Key value.
  Default is undef.
 
-=item * B<config>
+=item * C<config>
 
  Reference to hash structure with default config data.
  This is hash of hashes structure.
  Default value is reference to blank hash.
 
-=item * B<set_conflicts>
+=item * C<set_conflicts>
 
  Set conflicts detection as error.
  Default value is 1.
 
 =back
 
-=item B<parse($string_or_array_ref)>
+=item C<parse($string_or_array_ref)>
 
 Parse string $string_or_array_ref or reference to array 
 $string_or_array_ref and returns hash structure.
 
-=item B<reset()>
+=item C<reset()>
 
 Reset content in class (config parameter).
 
-=item B<serialize()>
+=item C<serialize()>
 
 Serialize 'config' hash to output.
 

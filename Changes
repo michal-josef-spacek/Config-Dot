@@ -1,6 +1,7 @@
 0.05
  - Add LICENSE.
  - Fix ERRORS section in doc.
+ - Rewrite B<> to C<> in doc for code parameters and methods.
 
 0.04 2013-09-21
  - Add SIGNATURE.
