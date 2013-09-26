@@ -234,15 +234,16 @@ Serialize 'config' hash to output.
 
 =head1 ERRORS
 
- Mine:
+ new():
          Bad 'config' parameter.
          Parameter 'callback' isn't code reference.
+         From Class::Utils::set_params():
+                 Unknown parameter '%s'.
 
- From Class::Utils::set_params():
-         Unknown parameter '%s'.
-
- From Config::Utils::conflict():
-         Conflict in '%s'.
+ parse():
+         Bad key '%s' in string '%s' at line '%s'.
+         From Config::Utils::hash():
+                  Conflict in '%s'.
 
 =head1 EXAMPLE1
 
