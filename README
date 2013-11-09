@@ -8,10 +8,10 @@ SYNOPSIS
      my $serialized = $cnf->serialize;
 
 METHODS
-    new(%params)
+    "new(%params)"
              Constructor.
 
-            *       callback
+            *       "callback"
 
                      Callback code for adding parameter.
                      Callback arguments are:
@@ -19,24 +19,25 @@ METHODS
                      $value - Key value.
                      Default is undef.
 
-            *       config
+            *       "config"
 
                      Reference to hash structure with default config data.
                      This is hash of hashes structure.
                      Default value is reference to blank hash.
 
-            *       set_conflicts
+            *       "set_conflicts"
 
                      Set conflicts detection as error.
                      Default value is 1.
 
-    parse($string_or_array_ref)
+    "parse($string_or_array_ref)"
             Parse string $string_or_array_ref or reference to array
             $string_or_array_ref and returns hash structure.
 
-    reset() Reset content in class (config parameter).
+    "reset()"
+            Reset content in class (config parameter).
 
-    serialize()
+    "serialize()"
             Serialize 'config' hash to output.
 
 PARAMETER_FILE
@@ -53,15 +54,16 @@ PARAMETER_FILE
      key2.subkey.subkey=val
 
 ERRORS
-     Mine:
+     new():
              Bad 'config' parameter.
              Parameter 'callback' isn't code reference.
+             From Class::Utils::set_params():
+                     Unknown parameter '%s'.
 
-     From Class::Utils::set_params():
-             Unknown parameter '%s'.
-
-     From Config::Utils::conflict():
-             Conflict in '%s'.
+     parse():
+             Bad key '%s' in string '%s' at line '%s'.
+             From Config::Utils::hash():
+                      Conflict in '%s'.
 
 EXAMPLE1
      # Pragmas.

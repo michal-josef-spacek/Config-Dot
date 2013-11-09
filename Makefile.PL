@@ -10,6 +10,7 @@ abstract 'Module for simple configure file parsing.';
 author 'Michal Špaček <skim@cpan.org>';
 license 'bsd';
 name 'Config-Dot';
+readme_from 'Dot.pm';
 requires 'Class::Utils' => 0.03;
 requires 'Config::Utils' => 0.03;
 requires 'Error::Pure' => 0.08;

@@ -1,4 +1,5 @@
 0.05
+ - Add 'readme_from' directive to Makefile.PL.
  - Add LICENSE.
  - Fix ERRORS section in doc.
  - Rewrite B<> to C<> in doc for code parameters and methods.
