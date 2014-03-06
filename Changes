@@ -1,4 +1,4 @@
-0.05
+0.05 2014-03-06
  - Add 'readme_from' directive to Makefile.PL.
  - Add LICENSE.
  - Add error check for newline in value. It's inconsistent.
