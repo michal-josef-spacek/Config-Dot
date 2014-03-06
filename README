@@ -65,6 +65,9 @@ ERRORS
              From Config::Utils::hash():
                       Conflict in '%s'.
 
+     serialize():
+             Unsupported stay with newline in value.
+
 EXAMPLE1
      # Pragmas.
      use strict;

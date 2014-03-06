@@ -147,6 +147,9 @@ sub _serialize {
 				push @ret, $key.'.'.$subkey;
 			}
 		} else {
+			if ($config_hr->{$key} =~ m/\n/ms) {
+				err 'Unsupported stay with newline in value.';
+			}
 			push @ret, $key.'='.$config_hr->{$key};
 		}
 	}
@@ -244,6 +247,9 @@ Serialize 'config' hash to output.
          Bad key '%s' in string '%s' at line '%s'.
          From Config::Utils::hash():
                   Conflict in '%s'.
+
+ serialize():
+         Unsupported stay with newline in value.
 
 =head1 EXAMPLE1
 

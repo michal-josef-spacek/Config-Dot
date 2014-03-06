@@ -1,6 +1,7 @@
 0.05
  - Add 'readme_from' directive to Makefile.PL.
  - Add LICENSE.
+ - Add error check for newline in value. It's inconsistent.
  - Add missing Error::Pure::Utils::clean() after error in tests.
  - Fix ERRORS section in doc.
  - Rewrite B<> to C<> in doc for code parameters and methods.
