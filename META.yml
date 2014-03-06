@@ -29,7 +29,7 @@ no_index:
 requires:
   Class::Utils: 0.03
   Config::Utils: 0.03
-  Error::Pure: 0.08
+  Error::Pure: 0.16
   Readonly: 0
   perl: 5.6.2
 resources:
