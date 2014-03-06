@@ -5,6 +5,7 @@ use warnings;
 # Modules.
 use Config::Dot;
 use English qw(-no_match_vars);
+use Error::Pure::Utils qw(clean);
 use Test::More 'tests' => 7;
 use Test::NoWarnings;
 
@@ -43,6 +44,7 @@ eval {
 };
 is($EVAL_ERROR, "Bad key ';' in string ';=' at line '1'.\n",
 	'Bad key.');
+clean();
 
 # Test.
 $c->reset;
@@ -55,6 +57,7 @@ eval {
 };
 is($EVAL_ERROR, "Conflict in 'key'.\n",
 	'Conflict in key \'key\', \'set_conflict\' = 1.');
+clean();
 
 # Test.
 $c = Config::Dot->new(
