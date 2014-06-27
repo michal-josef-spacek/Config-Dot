@@ -208,16 +208,20 @@ Config::Dot - Module for simple configure file parsing.
 
 =item C<parse($string_or_array_ref)>
 
-Parse string $string_or_array_ref or reference to array 
-$string_or_array_ref and returns hash structure.
+ Parse string $string_or_array_ref or reference to array $string_or_array_ref.
+ Use $INPUT_RECORD_SEPARATOR variable to split lines.
+ Returns hash structure with configuration.
 
 =item C<reset()>
 
-Reset content in class (config parameter).
+ Reset content in class (config parameter).
+ Returns undef.
 
 =item C<serialize()>
 
-Serialize 'config' hash to output.
+ Serialize 'config' hash to output.
+ Use $INPUT_RECORD_SEPARATOR variable to join lines.
+ Returns string with serialized configuration.
 
 =back
 
