@@ -1,4 +1,5 @@
 0.06
+ - Fix LICENSE file.
  - Improve doc.
  - Update Module::Install to 1.08 version.
 
