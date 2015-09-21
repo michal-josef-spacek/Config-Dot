@@ -18,7 +18,7 @@ my $ret = $c->parse(<<'END');
 key=value
 END
 is_deeply(
-	$ret, 
+	$ret,
 	{
 		'key' => 'value',
 	},
