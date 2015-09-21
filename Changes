@@ -2,6 +2,7 @@
  - Improve SEE ALSO section in doc.
  - Remove diacritics from author name.
  - Update Module::Install to 1.16 version.
+ - Update copyright years.
 
 0.06 2014-08-17T11:58:11+02:00
  - Fix LICENSE file.
