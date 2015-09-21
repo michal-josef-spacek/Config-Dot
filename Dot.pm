@@ -357,7 +357,13 @@ L<Readonly>.
 
 =head1 SEE ALSO
 
-L<Config::Utils>.
+=over
+
+=item L<Config::Utils>
+
+Common config utilities.
+
+=back
 
 =head1 REPOSITORY
 

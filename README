@@ -165,7 +165,8 @@ DEPENDENCIES
     Class::Utils, Config::Utils, English, Error::Pure, Readonly.
 
 SEE ALSO
-    Config::Utils.
+    Config::Utils
+        Common config utilities.
 
 REPOSITORY
     <https://github.com/tupinek/Config-Dot>
