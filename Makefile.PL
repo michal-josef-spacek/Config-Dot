@@ -7,7 +7,7 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'Module for simple configure file parsing.';
-author 'Michal Špaček <skim@cpan.org>';
+author 'Michal Spacek <skim@cpan.org>';
 license 'bsd';
 name 'Config-Dot';
 readme_from 'Dot.pm';
