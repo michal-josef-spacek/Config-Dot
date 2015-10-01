@@ -363,6 +363,10 @@ L<Readonly>.
 
 Common config utilities.
 
+=item L<Config::Dot::Array>
+
+Module for simple configure file parsing with arrays.
+
 =back
 
 =head1 REPOSITORY

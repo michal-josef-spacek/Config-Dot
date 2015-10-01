@@ -168,6 +168,9 @@ SEE ALSO
     Config::Utils
         Common config utilities.
 
+    Config::Dot::Array
+        Module for simple configure file parsing with arrays.
+
 REPOSITORY
     <https://github.com/tupinek/Config-Dot>
 
