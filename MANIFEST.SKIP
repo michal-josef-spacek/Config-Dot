@@ -9,3 +9,4 @@ MYMETA.json
 MYMETA.yml
 cover_db/
 TODO
+.travis.yml
