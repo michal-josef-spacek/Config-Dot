@@ -1,6 +1,7 @@
 0.08
  - Add Config::Dot::Array to SEE ALSO section in doc.
  - Update Module::Install to 1.18 version.
+ - Update author name.
 
 0.07 2015-09-21T22:30:29+02:00
  - Improve LICENSE AND COPYRIGHT section in doc.
