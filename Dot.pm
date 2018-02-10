@@ -1,10 +1,8 @@
 package Config::Dot;
 
-# Pragmas.
 use strict;
 use warnings;
 
-# Modules.
 use Class::Utils qw(set_params);
 use Config::Utils qw(hash);
 use English qw(-no_match_vars);
@@ -14,7 +12,6 @@ use Readonly;
 # Constants.
 Readonly::Scalar my $EMPTY_STR => q{};
 
-# Version.
 our $VERSION = 0.08;
 
 # Constructor.
@@ -257,11 +254,9 @@ Config::Dot - Module for simple configure file parsing.
 
 =head1 EXAMPLE1
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Config::Dot;
  use Dumpvalue;
 
@@ -285,11 +280,9 @@ Config::Dot - Module for simple configure file parsing.
 
 =head1 EXAMPLE2
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Config::Dot;
 
  # Object with data.
@@ -311,11 +304,9 @@ Config::Dot - Module for simple configure file parsing.
 
 =head1 EXAMPLE3
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Config::Dot;
  use Dumpvalue;
 

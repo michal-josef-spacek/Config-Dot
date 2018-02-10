@@ -73,11 +73,9 @@ ERRORS
              Unsupported stay with newline in value.
 
 EXAMPLE1
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Config::Dot;
      use Dumpvalue;
 
@@ -100,11 +98,9 @@ EXAMPLE1
      #       'subkey1' => 'value3',
 
 EXAMPLE2
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Config::Dot;
 
      # Object with data.
@@ -125,11 +121,9 @@ EXAMPLE2
      # key2=value2
 
 EXAMPLE3
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Config::Dot;
      use Dumpvalue;
 
