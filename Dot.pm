@@ -362,7 +362,7 @@ Module for simple configure file parsing with arrays.
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/Config-Dot>
+L<https://github.com/michal-josef-spacek/Config-Dot>
 
 =head1 AUTHOR
 
