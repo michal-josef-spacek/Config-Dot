@@ -4,7 +4,7 @@ use warnings;
 use Config::Dot;
 use English qw(-no_match_vars);
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 8;
+use Test::More 'tests' => 9;
 use Test::NoWarnings;
 
 # Test.
@@ -54,6 +54,18 @@ eval {
 is($EVAL_ERROR, "Bad 'config' parameter.\n",
 	'Bad \'config\' parameter.');
 clean();
+
+# Test.
+eval {
+	Config::Dot->new(
+		'config' => {
+			'key' => {
+				'subkey' => 'value',
+			},
+		},
+	);
+};
+isa_ok($obj, 'Config::Dot');
 
 # Test.
 eval {
