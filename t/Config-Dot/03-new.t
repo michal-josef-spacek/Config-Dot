@@ -18,6 +18,7 @@ $obj = Config::Dot->new(
 	},
 );
 isa_ok($obj, 'Config::Dot');
+$obj->parse('key=value'); # Run callback because coverage of test.
 
 # Test.
 eval {
