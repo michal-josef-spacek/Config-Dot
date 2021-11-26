@@ -19,5 +19,5 @@ my $c = Config::Dot->new(
 print $c->serialize."\n";
 
 # Output:
-# key1=subkey1.value1
+# key1.subkey1=value1
 # key2=value2

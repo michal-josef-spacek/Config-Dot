@@ -300,7 +300,7 @@ Config::Dot - Module for simple configure file parsing.
  print $c->serialize."\n";
 
  # Output:
- # key1=subkey1.value1
+ # key1.subkey1=value1
  # key2=value2
 
 =head1 EXAMPLE3
