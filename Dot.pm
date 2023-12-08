@@ -279,6 +279,8 @@ Returns string with serialized configuration.
 
 =head1 EXAMPLE1
 
+=for comment filename=parse_example.pl
+
  use strict;
  use warnings;
 
@@ -305,6 +307,8 @@ Returns string with serialized configuration.
 
 =head1 EXAMPLE2
 
+=for comment filename=serialize_example.pl
+
  use strict;
  use warnings;
 
@@ -328,6 +332,8 @@ Returns string with serialized configuration.
  # key2=value2
 
 =head1 EXAMPLE3
+
+=for comment filename=parse_example_with_callback.pl
 
  use strict;
  use warnings;
