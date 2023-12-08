@@ -2,6 +2,7 @@
  - Fix EXAMPLE2 in doc.
  - Update COPYRIGHT year.
  - Update LICENSE AND COPYRIGHT section in doc.
+ - Update Module::Install to 1.19 version.
  - Update SYNOPSIS section in doc.
 
 0.09 2020-01-11T23:37:55+01:00
