@@ -176,53 +176,76 @@ Config::Dot - Module for simple configure file parsing.
 
 =head1 METHODS
 
-=over 8
+=head2 C<new>
 
-=item C<new(%params)>
+ my $cnf = Config::Dot->new(%params);
 
- Constructor.
+Constructor.
 
 =over 8
 
 =item * C<callback>
 
- Callback code for adding parameter.
- Callback arguments are:
- $key_ar - Reference to array with keys.
- $value - Key value.
- Default is undef.
+Callback code for adding parameter.
+
+Callback arguments are:
+
+=over
+
+=item C<$key_ar>
+
+Reference to array with keys.
+
+=item C<$value>
+
+Key value.
+
+=back
+
+Default is undef.
 
 =item * C<config>
 
- Reference to hash structure with default config data.
- This is hash of hashes structure.
- Default value is reference to blank hash.
+Reference to hash structure with default config data.
+This is hash of hashes structure.
+
+Default value is reference to blank hash.
 
 =item * C<set_conflicts>
 
- Set conflicts detection as error.
- Default value is 1.
+Set conflicts detection as error.
+
+Default value is 1.
 
 =back
 
-=item C<parse($string_or_array_ref)>
+Returns instance of object.
 
- Parse string $string_or_array_ref or reference to array $string_or_array_ref.
- Use $INPUT_RECORD_SEPARATOR variable to split lines.
- Returns hash structure with configuration.
+=head2 C<parse>
 
-=item C<reset()>
+ my $struct_hr = $cnf->parse($string);
 
- Reset content in class (config parameter).
- Returns undef.
+Parse string C<$string_or_array_ref> or reference to array C<$string_or_array_ref>.
+Use C<$INPUT_RECORD_SEPARATOR> variable to split lines.
 
-=item C<serialize()>
+Returns hash structure with configuration.
 
- Serialize 'config' hash to output.
- Use $INPUT_RECORD_SEPARATOR variable to join lines.
- Returns string with serialized configuration.
+=head2 C<reset>
 
-=back
+ $cnf->reset;
+
+Reset content in class (config parameter).
+
+Returns undef.
+
+=head2 C<serialize>
+
+ my $serialized = $cnf->serialize;
+
+Serialize 'config' hash to output.
+Use C<$INPUT_RECORD_SEPARATOR> variable to join lines.
+
+Returns string with serialized configuration.
 
 =head1 PARAMETER_FILE
 

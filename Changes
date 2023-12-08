@@ -2,6 +2,7 @@
  - Fix EXAMPLE2 in doc.
  - Improve SYNOPSIS section in doc.
  - Move bugtracker to github.
+ - Rewrite doc to use of =head2.
  - Update COPYRIGHT year.
  - Update LICENSE AND COPYRIGHT section in doc.
  - Update Module::Install to 1.19 version.
