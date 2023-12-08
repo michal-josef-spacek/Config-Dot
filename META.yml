@@ -31,7 +31,7 @@ requires:
   Readonly: 0
   perl: 5.6.2
 resources:
-  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Config-Dot
+  bugtracker: https://github.com/michal-josef-spacek/Config-Dot/issues
   homepage: https://github.com/michal-josef-spacek/Config-Dot
   license: http://opensource.org/licenses/bsd-license.php
   repository: git://github.com/michal-josef-spacek/Config-Dot
