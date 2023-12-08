@@ -285,7 +285,7 @@ Returns string with serialized configuration.
  use warnings;
 
  use Config::Dot;
- use Dumpvalue;
+ use Data::Printer;
 
  # Object.
  my $struct_hr = Config::Dot->new->parse(<<'END');
@@ -294,16 +294,17 @@ Returns string with serialized configuration.
  key3.subkey1=value3
  END
 
- # Dump
- my $dump = Dumpvalue->new;
- $dump->dumpValues($struct_hr);
+ # Dump.
+ p $struct_hr;
 
  # Output:
- # 0  HASH(0x84b98a0)
- #    'key1' => 'value1',
- #    'key2' => 'value2',
- #    'key3' => HASH(0x8da3ab0)
- #       'subkey1' => 'value3',
+ # {
+ #     key1   "value1",
+ #     key2   "value2",
+ #     key3   {
+ #         subkey1   "value3"
+ #     }
+ # }
 
 =head1 EXAMPLE2
 
@@ -339,7 +340,7 @@ Returns string with serialized configuration.
  use warnings;
 
  use Config::Dot;
- use Dumpvalue;
+ use Data::Printer;
 
  # Object.
  my $struct_hr = Config::Dot->new(
@@ -358,16 +359,17 @@ Returns string with serialized configuration.
  key3.subkey1=value3
  END
 
- # Dump
- my $dump = Dumpvalue->new;
- $dump->dumpValues($struct_hr);
+ # Dump.
+ p $struct_hr;
 
  # Output:
- # 0  HASH(0x84b98a0)
- #    'key1' => 'value1',
- #    'key2' => 'value2',
- #    'key3' => HASH(0x8da3ab0)
- #       'subkey1' => 'FOOBAR',
+ # {
+ #     key1   "value1",
+ #     key2   "value2",
+ #     key3   {
+ #         subkey1   "FOOBAR"
+ #     }
+ # }
 
 =head1 DEPENDENCIES
 

@@ -4,6 +4,7 @@
  - Move bugtracker to github.
  - Rename example files to better names.
  - Rewrite doc to use of =head2.
+ - Rewrite example in doc from Dumpvalue to Data::Printer.
  - Update COPYRIGHT year.
  - Update LICENSE AND COPYRIGHT section in doc.
  - Update Module::Install to 1.19 version.
